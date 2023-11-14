@@ -16,7 +16,7 @@ module.exports = {
      * }], {});
     */
 
-    await queryInterface.bulkInsert('users', [
+    await queryInterface.bulkInsert('Users', [
       createUser(2, 'joni', 'joni123'), createUser(1, 'cecep', 'cecep123')
     ])
   },

@@ -13,23 +13,23 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Users.hasMany(models.Todos, { as: "user_id" , onDelete:"CASCADE", onUpdate:"CASCADE"})
+      Users.hasMany(models.Todos, { as: "user_id", onDelete: "CASCADE", onUpdate: "CASCADE" })
     }
   }
   Users.init({
     username: {
       type: DataTypes.STRING,
       set(value) {
-        this.setDataValue('username',hash(value))
+        this.setDataValue('username', hash(value))
       },
-      allowNull: false
-
+      allowNull: false,
+      unique: true
 
     },
     password: {
       type: DataTypes.STRING,
       set(value) {
-        this.setDataValue('password',hash(value))
+        this.setDataValue('password', hash(value))
       },
       allowNull: false
     },
