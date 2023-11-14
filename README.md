@@ -7,11 +7,13 @@ https://todos-api.nutripal.site/
 <h3>Register</h3>
 <p>POST        : https://todos-api.nutripal.site/register</p>
 <p>body option : {username,password}</p>
+<p>reponse     : new token</p>
 <hr>
 
 <h3>Login</h3>
 <p>POST        : https://todos-api.nutripal.site/login</p>
 <p>body option : {username,password}</p>
+<p>reponse     : new token</p>
 <hr>
 
 
